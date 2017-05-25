@@ -6,9 +6,34 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
+  <div class="container"> <!-- open container --> 
+		<div class="fondo1">  			
+  				<div class="col-xs-3">
+    				<center><img class="img-responsive" src="banana-1300390_1280.png"style="width:30%"></center>
+    			</div>
+    			<div class="col-xs-7">
+    				<b><h1>M<span style="color:yellow">E</span>L<span style="color:yellow">L</span>O<span style="color:yellow">W </span> B<span style="color:yellow">A</span>N<span style="color:yellow">A</span>N<span style="color:yellow">A</span></h1></b>
+    			</div>
+    			<div class="col-xs-2">
+    			</div>
+    			<br />
+    	</div>
+    	<div class="fondo2">
+    		<div class="col-xs-12"> 
+    			<ul class="nav nav-tabs">
+  					<li role="presentation" class="active"><a href="#">Home</a></li>
+  					<li role="presentation"><a href="#">Movies</a></li>
+  					<li role="presentation"><a href="#">DVD</a></li>
+            <li role="presentation"><a href="#">NEWS</a></li>
+            <li role="presentation"><a href="#">TV</a></li>
+				</ul> 
+			</div> 			
+		</div>
 
   <body>
     <%= yield %>
   </body>
+  </div><!-- / container -->
 </html>
