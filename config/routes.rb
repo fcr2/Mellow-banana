@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  get 'statics/index'
+root to: 'statics#index'
 
-  get 'statics/about'
+  get '/about' => 'statics#about', :as => :about
 
   devise_for :models
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-root to: "peliculas#index"
-# resources :peliculas
+# root to: "peliculas#index"
+resources :peliculas
 end
