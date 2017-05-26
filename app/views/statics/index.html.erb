@@ -2,6 +2,27 @@
 <p>Find me in app/views/statics/index.html.erb</p>
 <p>HOLA</p>
 
-<p><%= link_to "About us", about_path %></p> 
+<!-- <p><%= link_to "About us", about_path %></p> 
 <p><%=link_to "Login", new_user_session_path %></p> 
-<p><%=link_to "Sign up", new_user_registration_path %></p>
+<p><%=link_to "Sign up", new_user_registration_path %></p> -->
+
+		<ul>
+			<% if user_signed_in? %>
+			<li>
+				<%= link_to "Sing Out", destroy_user_session_path, method: :delete %>
+			</li>
+			<li>
+				<%= current_user.email %>
+			</li>
+			<li>
+				<%= link_to "Edit Account", edit_user_registration_path %>
+			</li>
+			<% else%>
+			<li>
+				<%= link_to "Sing in", new_user_session_path %>
+			</li>
+			<li>
+				<%= link_to "Sing Up", new_user_registration_path %>
+			</li>
+			<% end %>
+		<ul>
