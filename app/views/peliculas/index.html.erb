@@ -1,32 +1,27 @@
-<div class="row"><!-- first column -->
-	<div class="col-xs-9">
-		<h1>index#page</h1>
-		<p>prove text one, two, three ...</p>
-	</div>
-	<div class="col-xs-3"><!-- first column -->
-	<br />
-		<ul>
-			<% if user_signed_in? %>
-			<li>
-				<%= link_to "Sing Out", destroy_user_session_path, method: :delete %>
-			</li>
-			<li>
-				<%= current_user.email %>
-			</li>
-			<li>
-				<%= link_to "Edit Account", edit_user_registration_path %>
-			</li>
-			<% else%>
-			<li>
-				<%= link_to "Sing in", new_user_session_path %>
-			</li>
-			<li>
-				<%= link_to "Sing Up", new_user_registration_path %>
-			</li>
-			<% end %>
-		<ul>
-	<br />
-	</div><!-- / column -->
+	<div class="col-xs-12" >
+		<br />
+		<div class="panel panel-default">
+  			<div class="panel-heading">
+    			<center><h1>Lista <b>Mellow Banana</b> de peliculas interesantes index#page </h1></center>
+  			</div>
+		</div>
+		
+
+		<% @pelicula.each do |peli| %>
+
+		<p>Nombre:<%=link_to peli.name, peli %></p>
+		<p>Estrellas:<%= peli.stars %></p>
+		<p>Actor principal:<%= peli.main_actor %></p>
+		<p>Año de la pelicula:<%= peli.year %></p>
+		<br />
+		<%= link_to "Editar Pelicula", edit_pelicula_path(peli), class:"btn btn-md btn-info" %>
+		<%= link_to "Eliminar Pelicula", pelicula_path(peli), method: :delete, class:"btn btn-md btn-warning" %>
+		<hr />
+		<%end%>		
+		<br />
+		<p> <%= link_to "Añadir nueva peli", new_pelicula_path, class:"btn btn-md btn-success" %> </p>
+		<br />
+		<hr />
+	</div>		
 
 
-</div><!-- / row -->

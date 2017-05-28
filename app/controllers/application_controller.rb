@@ -4,6 +4,10 @@ class ApplicationController < ActionController::Base
   # before_filter :sanitize_divise_params
   before_action :configure_permitted_parameters, if: :devise_controller?
 
+  def index
+    @gnl = General.all
+  end
+
   protected
 
   def configure_permitted_parameters

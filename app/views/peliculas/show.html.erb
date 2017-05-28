@@ -1,0 +1,15 @@
+	<div class="col-xs-12" >
+	<br />
+	<hr />	
+	<h3>INFO-<b>FILM</b></h3>	
+	<br />
+	<b>Nombre de la película: </b> <%= @pelicula.name %><br />
+	<b>Estrellas que tiene: </b> <%= @pelicula.stars %><br />
+	<b>Actor Pincipal: </b> <%= @pelicula.main_actor %><br />
+	<b>Año: </b> <%= @pelicula.year %><br />
+	<b>Se añadió a la base de datos el...</b> <%= @pelicula.created_at %><br />
+	<br />	
+	<%= link_to "Listado Peliculas", peliculas_path, class:"btn btn-md btn-info" %>
+	<%= link_to "Eliminar Pelicula", pelicula_path, method: :delete, class:"btn btn-md btn-warning" %>
+	<hr />
+	</div>

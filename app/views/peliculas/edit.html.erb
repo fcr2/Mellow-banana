@@ -1,0 +1,16 @@
+	<div class="col-xs-12" >
+
+		<h3>EDITAR la pelicula</h3>
+ 
+		<%= form_for @pelicula do |peli|%>
+ 
+		<b>Nombre de la película: </b><br /><%= peli.text_field :name%> <br /><br />
+		<b>Puntuación (estrellas): </b><br /><%= peli.text_field :stars%> <br /><br />
+ 		<b>Actor principal: </b><br /><%= peli.text_field :main_actor%> <br /><br />
+ 		<b>Año de estreno: </b><br /><%= peli.text_field :year%> <br /><br /> 
+ 		<br />
+ 		<%= link_to "Lista peliculas", peliculas_path, class:"btn btn-md btn-info"%> 
+		<%= peli.submit "actualizar", class:"btn btn-md btn-success"%> 		
+		<%end%>
+		<hr />
+	</div>

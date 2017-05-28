@@ -1,28 +1,62 @@
-<h1>Statics#index</h1>
-<p>Find me in app/views/statics/index.html.erb</p>
-<p>HOLA</p>
-
-<!-- <p><%= link_to "About us", about_path %></p> 
-<p><%=link_to "Login", new_user_session_path %></p> 
-<p><%=link_to "Sign up", new_user_registration_path %></p> -->
-
-		<ul>
-			<% if user_signed_in? %>
-			<li>
-				<%= link_to "Sing Out", destroy_user_session_path, method: :delete %>
-			</li>
-			<li>
-				<%= current_user.email %>
-			</li>
-			<li>
-				<%= link_to "Edit Account", edit_user_registration_path %>
-			</li>
-			<% else%>
-			<li>
-				<%= link_to "Sing in", new_user_session_path %>
-			</li>
-			<li>
-				<%= link_to "Sing Up", new_user_registration_path %>
-			</li>
-			<% end %>
-		<ul>
+<!-- <div class="fondocuerpoindx"> -->
+	<div class="col-xs-10 ">
+		<h3>Lista Mellow Banana de peliculas interesantes </h3>
+		<p>Pelicula1</p>
+		<p>Pelicula2</p>
+		<p>Pelicula3</p>
+		<p>Pelicula4</p>
+		<p>Pelicula5</p>
+		<%= link_to "Más >>", peliculas_path, class:"btn btn-md btn-default" %> 
+	</div>
+	<div class="col-xs-2 ">
+		
+	</div>
+	<div class="col-xs-10">
+		<h3>Lista Mellow Banana de DVD interesantes </h3>
+		<p>DVD1</p>
+		<p>DVD2</p>
+		<p>DVD3</p>
+		<p>DVD4</p>
+		<p>DVD5</p> 
+		<%= link_to "Más >>", home_path, class:"btn btn-md btn-default" %>
+	</div>
+	<div class="col-xs-2 ">
+		
+	</div>
+	<div class="col-xs-10 ">		
+		<h3>Lista Mellow Banana de News interesantes </h3>
+		<p>News1</p>
+		<p>News2</p>
+		<p>News3</p>
+		<p>News4</p>
+		<p>News5</p> 
+		<%= link_to "Más >>", home_path, class:"btn btn-md btn-default" %>
+	</div>
+	<div class="col-xs-2 ">
+		
+	</div>
+	<div class="col-xs-10 ">
+		<h3>Lista Mellow Banana de TV programs interesantes </h3>
+		<p>Programa1</p>
+		<p>Programa2</p>
+		<p>Programa3</p>
+		<p>Programa4</p>
+		<p>Programa5</p>
+		<%= link_to "Más >>", home_path, class:"btn btn-md btn-default" %> 
+	</div>
+	<div class="col-xs-2 ">
+		
+	</div>
+	<div class="col-xs-10 ">
+		<h3>Lista Mellow Banana de TV programs interesantes </h3>
+		<p>Programa1</p>
+		<p>Programa2</p>
+		<p>Programa3</p>
+		<p>Programa4</p>
+		<p>Programa5</p>
+		<%= link_to "Más >>", home_path, class:"btn btn-md btn-default" %> 
+	</div>
+	<div class="col-xs-2 ">
+		
+	</div>
+<!-- </div> -->
