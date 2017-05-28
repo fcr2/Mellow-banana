@@ -1,3 +1,106 @@
 // Place all the styles related to the statics controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$fondoencabezado: #494D56 ;
+$bordesuperior: #FFD700;
+$fondocolorb: #F9F9FB;
+$subtexto: #DFD3D7;
+$blanco: #FFF;
+$fondoinferior: #27282C;
+$lletresgrises: #696969;
+
+.aplicaciondisenyo {
+    .fondoencabezado {
+    background-color: $fondoencabezado;
+    height: 80px;
+    width: 100%;
+    border-top: 10px solid $bordesuperior;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 100px;
+    text-align: right;
+    padding-right: 20px;
+        .textocorreo {
+        font-size: 16px;
+        color: $blanco;
+        
+        }
+    }
+
+  	.fondoencabezadotitulo {
+    background-color: $fondoencabezado;
+    height: 180px;
+    width: 100%;    
+    padding-top: 10px;
+    padding-bottom: 50px;
+    padding-left: 100px;
+
+
+    	.textotitulo {
+    	font-size: 50px;
+    	color: $blanco;
+    	
+    	}
+    	.diferente {
+    	color:$bordesuperior;    	
+    	font-size: 50px;
+    	}
+    	    	
+    }
+
+   	.fondonav{
+   	background-color: $fondoencabezado;
+    height: 80px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 20px;  
+       
+   	}
+   	.fondocuerpo{
+   	background-color: $fondocolorb;
+    height: 100%;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;    
+   	}
+    .fondocuerpoindx{
+    background-color: $fondocolorb;
+    height: 1000px;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    padding-left: 0px;
+    padding-right: 0px;
+
+    .textoalineado{
+        text-align: bottom;
+    }    
+    }    
+
+     .fondopie {
+    background-color: $fondoencabezado;
+    height: 60px;
+    width: 100%;
+    padding-top: 20px;
+    margin-bottom: 50px;
+    margin-top: 0px;
+    text-align: right;
+
+    .colorpie {
+    color:$bordesuperior;
+    font-weight: normal;
+    }
+    .textopie {
+    color:$blanco;
+    font-size: 14px;
+    }
+    .mb {
+    color:$bordesuperior;
+    }
+
+  }
+
+}
