@@ -2,20 +2,19 @@
 		<br />
 		<div class="panel panel-default">
   			<div class="panel-heading">
-    			<center><h1>Lista <b>Mellow Banana</b> de peliculas interesantes index#page </h1></center>
+    			<center><h1><b>Mellow Banana</b> film list index#page </h1></center>
   			</div>
 		</div>
 		
 
 		<% @pelicula.each do |peli| %>
 
-		<p>Nombre:<%=link_to peli.name, peli %></p>
-		<p>Estrellas:<%= peli.stars %></p>
-		<p>Actor principal:<%= peli.main_actor %></p>
-		<p>Año de la pelicula:<%= peli.year %></p>
+		<p>Film name:<%=link_to peli.name, peli %></p>
+		<p>Rating:<%= peli.rating %></p>
+		<p>Main actor:<%= peli.main_actor %></p>
+		<p>Launching:<%= peli.launching %></p>
 		<br />
-		<%= link_to "Editar Pelicula", edit_pelicula_path(peli), class:"btn btn-md btn-info" %>
-		<%= link_to "Eliminar Pelicula", pelicula_path(peli), method: :delete, class:"btn btn-md btn-warning" %>
+
 		<hr />
 		<%end%>		
 		<br />

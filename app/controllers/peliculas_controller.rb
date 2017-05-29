@@ -17,7 +17,7 @@ class PeliculasController < ApplicationController
    	@pelicula = Pelicula.new(pelicula_params)
       
    		if @pelicula.save
-   			redirect_to peliculas_path, notice: "Se ha guardado la peli!"
+   			redirect_to peliculas_path, notice: "film saved!"
     	else
     		render "new"
     	end
@@ -31,7 +31,7 @@ class PeliculasController < ApplicationController
     @pelicula = Pelicula.find(params[:id])      
 
       if @pelicula.update_attributes(pelicula_params)
-        redirect_to peliculas_path, notice: "éxito!"
+        redirect_to peliculas_path, notice: "success!"
       else 
         render :edit
       end
@@ -40,12 +40,12 @@ class PeliculasController < ApplicationController
    def destroy
     @pelicula = Pelicula.find(params[:id])
     @pelicula.destroy
-        redirect_to peliculas_path, notice: "Se ha eliminado la peli!"
+        redirect_to peliculas_path, notice: "film deleted!"
    end
 
    private
       def pelicula_params
-      params.require(:pelicula).permit(:name, :stars, :main_actor, :year)
+      params.require(:pelicula).permit(:name, :rating, :main_actor, :Synopsis, :launching)
       #parametres que nossaltres permetem que rails guardi la informació
       end
 end

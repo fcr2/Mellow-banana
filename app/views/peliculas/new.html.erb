@@ -1,33 +1,41 @@
-	<div class="col-xs-12" >
-	<h2>Añade aquí una nueva película</h2>
+<div class="col-xs-6 margenes" >
+	<h2>Add new film</h2>
+
+	<p>Add an interesting film amd rate it! Help the other people to chose a good film to watch!!</p>
 
 	<%= form_for @pelicula do |peli| %>
 
+
+
 	<p>
 	<%= peli.label :name %> <br/>
-	<%= peli.text_field :name %>
+	<%= peli.text_field(:name, {:class => 'form-control'}) %>
 	</p>
 
 	<p>
-	<%= peli.label :stars %> <br/>
-	<%= peli.text_field :stars %>
+	<%= peli.label :rating %> <br/>
+	<%= peli.text_field(:rating, {:class => 'form-control'}) %>
 	</p>
 
 	<p>
 	<%= peli.label :main_actor %> <br/>
-	<%= peli.text_field :main_actor %>
+	<%= peli.text_field(:main_actor, {:class => 'form-control'}) %>
 	</p>
 
 	<p>
-	<%= peli.label :year %> <br/>
-	<%= peli.text_field :year %>
+	<%= peli.label :launching %> <br/>
+	<%= peli.text_field(:launching, {:class => 'form-control'}) %>
 	</p>
 
-	<%= peli.submit "Añadir pelicula", class:"btn btn-md btn-success" %>
-	
+	<p>
+	<%= peli.label :Synopsis %> <br/>
+	<%= peli.text_area(:Synopsis, {:class => 'form-control'}) %>
+	</p>
+	<br />
+
+	<%= peli.submit "Add", class:"btn btn-md btn-success" %>
+	<%= link_to "List", peliculas_path, class:"btn btn-md btn-info"%>
+
 	<% end %>
-	<br />
-	<%= link_to "Lista peliculas", peliculas_path, class:"btn btn-md btn-info"%>	
-	<br />
-	<hr />
-	</div>
+	
+</div>

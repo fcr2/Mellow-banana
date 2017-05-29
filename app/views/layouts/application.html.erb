@@ -8,74 +8,18 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body class="aplicaciondisenyo">
-  <div class="container"> <!-- open container -->
-      <div class="row"> <!-- zero raw -->
-      <div class="fondoencabezado"> 
-          <div class="col-xs-12">
-      <p>
-      <% if user_signed_in? %>
-      
-        <%= link_to "Sing Out", destroy_user_session_path, method: :delete, class:"btn btn-md btn-default" %>
-      
-      
-        <%= current_user.email %>
-      
-      
-        <%= link_to "Edit Account", edit_user_registration_path, class:"btn btn-md btn-default" %>
-      
-      <% else%>
-      
-        <%= link_to "Sing in", new_user_session_path, class:"btn btn-md btn-default" %>
-      
-      
-        <%= link_to "Sing Up", new_user_registration_path, class:"btn btn-md btn-default" %>
-      
-      
-        <%= link_to "About us", about_path, class:"btn btn-md btn-default" %>
-      
-      <% end %>
-    <p>
-          </div>
-      </div>
-     </div> <!-- / first raw -->
-     <div class="row "> <!-- second raw -->
-      <div class="fondoencabezadotitulo">		
-  				<div class="col-xs-3">
-    				<center><img src="banana.png"style="width:50%"></center>
-    			</div>
-    			<div class="col-xs-7 textotitulo">
-    				<p> MELLOW <span class="diferente">BANANA</span>.</p>
-    			</div>
-    			<div class="col-xs-2"> 
-    			</div> 
-    			<br />
-    	</div>
-     </div> <!-- / second row -->
-     <div class="row"> <!-- third row -->
-    	<div class="fondonav">
-        <div class="col-xs-8">
-        </div>
-    		<div class="col-xs-4"> 
-    			<p>
-  					<%= link_to "Home", home_path, class:"btn btn-md btn-default" %>
-  					<%= link_to "Movies", home_path, class:"btn btn-md btn-default" %>
-  					<%= link_to "DVD", home_path, class:"btn btn-md btn-default" %>
-            <%= link_to "News", home_path, class:"btn btn-md btn-default" %>
-            <%= link_to "TV", home_path, class:"btn btn-md btn-default" %>
-				<p> 
-			  </div> 			
-		  </div>    
-     </div> <!-- / third raw -->
-     <div class="row fondocuerpo"> <!--  four raw -->
-      <!-- <div class="fondocuerpo"> -->
+
+    <%= render "layouts/navbar" %>
+
+     <div class="container"> <!-- container -->
+      <div class="row fondocuerpo ">
+
     <%= yield %>
-     <!-- </div> -->
-     </div><!-- / third raw -->
-      <div class="row"><!--  five row -->
-       <div class="col-xs-12 fondopie"><!-- first column -->
-        <p class="textopie"> <span class="glyphicon glyphicon-star mb"></span><span class="mb">MELLOW BANANA</span> developers </p>
-      </div><!-- / first column -->
-     </div ><!-- / five row -->    
-   </div> <!-- / container -->
+
+      </div> <!-- / row -->
+     </div> <!-- / container -->     
+
+   <%= render "layouts/footer" %>
+
   </body>
 </html>
