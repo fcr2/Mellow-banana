@@ -54,7 +54,8 @@ $lletresgrises: #696969;
     height: 80px;
     width: 100%;
     padding-top: 10px;
-    padding-bottom: 20px;  
+    padding-bottom: 20px;
+    padding-left: 65px;  
        
    	}
    	.fondocuerpo{
@@ -63,17 +64,13 @@ $lletresgrises: #696969;
     width: 100%;
     padding-top: 20px;
     padding-bottom: 50px;
-    padding-left: 50px;
-    padding-right: 50px;    
+    padding-right: 100px;
+    padding-left: 100px;
+       
    	}
-    .fondocuerpoindx{
-    background-color: $fondocolorb;
-    height: 1000px;
-    width: 100%;
-    padding-top: 20px;
-    padding-bottom: 50px;
-    padding-left: 0px;
-    padding-right: 0px;
+    .margenes{    
+    padding-left: 100px;
+    padding-right: 100px;
 
     .textoalineado{
         text-align: bottom;
