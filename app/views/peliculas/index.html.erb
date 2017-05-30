@@ -1,26 +1,46 @@
+<div class="row" >	
 	<div class="col-xs-12" >
 		<br />
 		<div class="panel panel-default">
   			<div class="panel-heading">
-    			<center><h1><b>Mellow Banana</b> film list index#page </h1></center>
+    			<center><h1><b>Mellow Banana</b> film list</h1></center>
   			</div>
 		</div>
-		
-
-		<% @pelicula.each do |peli| %>
-
-		<p>Film name:<%=link_to peli.name, peli %></p>
-		<p>Rating:<%= peli.rating %></p>
-		<p>Main actor:<%= peli.main_actor %></p>
-		<p>Launching:<%= peli.launching %></p>
-		<br />
-
+	</div>
+</div>
+<div class="row" >
+	<div class="col-xs-12" >
+  		<table class="table table-striped">
+   		 	<thead>
+     		 	<tr>
+       		 		<th>Image</th>
+       		 		<th>Description</th>        
+     		 	</tr>
+    		</thead>
+    		<tbody>
+      			<% @pelicula.each do |peli| %>
+     		 	<tr>
+        		<td><%= image_tag peli.image.url(:thumb) %></td>
+        		<td>
+       		 		<p>Film name:<%=link_to peli.name, peli %></p>
+					<p>Rating:<%= peli.rating %></p>
+					<p>Main actor:<%= peli.main_actor %></p>
+					<p>Launching:<%= peli.launching %></p></td>
+      			</tr>
+     		 	<%end%>      
+   			</tbody>
+  		</table>	
+	</div>
+</div>
+<div class="row" >
+	<div class="col-xs-12" >
 		<hr />
-		<%end%>		
-		<br />
+		<br />		
 		<p> <%= link_to "Añadir nueva peli", new_pelicula_path, class:"btn btn-md btn-success" %> </p>
 		<br />
 		<hr />
 	</div>		
+</div>
 
 
+		
