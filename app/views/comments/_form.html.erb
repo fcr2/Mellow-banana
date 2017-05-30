@@ -1,0 +1,17 @@
+<div class="col-xs-12">
+	<%= form_for([@pelicula,@pelicula.comments.build]) do |f| %>
+
+		<p>
+			<%= f.label :name %><br />
+			<%= f.text_field :name %>
+		</p>
+		<p>
+			<%= f.label :name %><br />
+			<%= f.text_area :body %>
+		</p>
+		<br />
+		<p>
+			<%= f.submit %>
+		</p>
+	<% end %>
+</div>
