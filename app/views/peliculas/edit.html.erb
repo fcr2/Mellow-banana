@@ -1,17 +1,21 @@
-	<div class="col-xs-12 margenes" >
+	<div class="col-xs-12 " >
 
 		<h3>Film edit</h3>
  
-		<%= form_for @pelicula do |peli|%>
+		<%= form_for @pelicula, html: { multipart: true } do |peli|%>
  
 		<b>Film name: </b><br /><%= peli.text_field :name%> <br /><br />
 		<b>Rating (stars): </b><br /><%= peli.text_field :rating%> <br /><br />
  		<b>Main actor: </b><br /><%= peli.text_field :main_actor%> <br /><br />
  		<b>Lauching: </b><br /><%= peli.text_field :launching%> <br /><br />
- 		<b>Synopsis: </b><br /><%= peli.text_area(:Synopsis, {:class => 'form-control'}) %> <br /><br /> 		 
+ 		<b>image:</b> <%= peli.file_field :image %><br />
+ 		<b>Synopsis: </b><br /><%= peli.text_area(:Synopsis, {:class => 'form-control'}) %> <br /><br /> 
+ 		
+
  		<br />
  		<%= link_to "Lista peliculas", peliculas_path, class:"btn btn-md btn-info"%> 
 		<%= peli.submit "actualizar", class:"btn btn-md btn-success"%> 
 				
 		<%end%>
+
 	</div>

@@ -13,14 +13,15 @@ class PeliculasController < ApplicationController
    	@pelicula = Pelicula.new 
    end
    
-   def create
+   def create    
    	@pelicula = Pelicula.new(pelicula_params)
-      
+     
    		if @pelicula.save
    			redirect_to peliculas_path, notice: "film saved!"
     	else
     		render "new"
     	end
+
    end
    
    def edit
@@ -45,7 +46,7 @@ class PeliculasController < ApplicationController
 
    private
       def pelicula_params
-      params.require(:pelicula).permit(:name, :rating, :main_actor, :Synopsis, :launching)
+      params.require(:pelicula).permit(:name, :rating, :main_actor, :Synopsis, :launching, :image)
       #parametres que nossaltres permetem que rails guardi la informació
       end
 end

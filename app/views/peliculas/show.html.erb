@@ -2,14 +2,19 @@
 	<hr />	
 	<h3>INFO-<b>FILM</b></h3>	
 	<br />
+	</div>
+	<div class="col-xs-6" >
 	<b>Film name: </b> <%= @pelicula.name %><br />
 	<b>Rating: </b> <%= @pelicula.rating %><br />
 	<b>Main actor: </b> <%= @pelicula.main_actor %><br />	
 	<b>Launching: </b> <%= @pelicula.launching %><br />
 	<b>Added to data base at...</b> <%= @pelicula.created_at %><br />
-	<b>Synopsis: </b> <%= @pelicula.Synopsis %><br />
-
-	<br />	
+	<b>Synopsis: </b> <%= @pelicula.Synopsis %><br />	
+	</div> 
+	<div class="col-xs-6" >
+	<b>image:</b><br /> <%= image_tag @pelicula.image.url(:medium) %><br />
+	</div>
+	<div class="col-xs-12" >	
 	<%= link_to "list", peliculas_path, class:"btn btn-md btn-default" %>	
 	<%= link_to "Edit", edit_pelicula_path, class:"btn btn-md btn-info" %>
 	<%= link_to "delete", pelicula_path, method: :delete, class:"btn btn-md btn-warning" %>
