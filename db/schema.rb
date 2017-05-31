@@ -10,16 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170530183532) do
-
-  create_table "comments", force: :cascade do |t|
-    t.string   "name"
-    t.text     "body"
-    t.integer  "pelicula_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.index ["pelicula_id"], name: "index_comments_on_pelicula_id"
-  end
+ActiveRecord::Schema.define(version: 20170529224210) do
 
   create_table "country_maps", force: :cascade do |t|
     t.string   "language_name"

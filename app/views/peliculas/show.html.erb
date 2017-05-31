@@ -19,19 +19,4 @@
 	<%= link_to "Edit", edit_pelicula_path, class:"btn btn-md btn-info" %>
 	<%= link_to "delete", pelicula_path, method: :delete, class:"btn btn-md btn-warning" %>
 	<hr />
-	<br />
-	<div class="col-xs-12" >
-		<h2><%= @pelicula.name %></h2>
-		<div>
-			<%= @pelicula.body %>
-		</div>
-		<br />
-		<h2> <%= @pelicula.comment.count %> Comments</h2>
-			<%= render @pelicula.comments %>
-			<h3>Add a comment: </h3>
-			<%= render 'comments/form' %>
-		<br />
-		<%= link_to "Edit", edit_pelicula_path(@pelicula), class:"btn btn-md btn-info" %>
-		<%= link_to "delete", pelicula_path(@pelicula), method: :delete, class:"btn btn-md btn-warning" %>
 	</div>
-</div>
