@@ -1,7 +1,7 @@
 class PeliculasController < ApplicationController
-  before_action :find_pelicula, only: [:show, :edit, :update; :destroy] 
    def index
-
+   	# muestra las películas que hay en la base de datos.. ya está...esto es todo
+    # lo que hace el index
     @pelicula = Pelicula.all    
    end
    
@@ -46,10 +46,7 @@ class PeliculasController < ApplicationController
 
    private
       def pelicula_params
-      params.require(:pelicula).permit(:name, :rating, :main_actor, :Synopsis, :launching, :image, :body)
+      params.require(:pelicula).permit(:name, :rating, :main_actor, :Synopsis, :launching, :image)
       #parametres que nossaltres permetem que rails guardi la informació
       end
-
-      def find_pelicula
-        @pelicula = Pelicula.find(params[:id])
 end
