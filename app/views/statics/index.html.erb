@@ -1,60 +1,55 @@
-	<div class="col-xs-10 ">
-		<h3>Mellow Banana interesting film list </h3>
-		<p></p>
-		<p>Pelicula2</p>
-		<p>Pelicula3</p>
-		<p>Pelicula4</p>
-		<p>Pelicula5</p>
-		<%= link_to "Más >>", peliculas_path, class:"btn btn-md btn-default" %> 
+
+<div class="row">
+	<div class="textrecuadro1 col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+		<h3><b>Mellow Banana interesting FILM list</b></h3>
+		<p><% @pelicula.each do |p| %></p>
+      	<p><%= p.name %></p>
+    	<% end %>
+
+		<%= link_to " >> ", peliculas_path, class:"btn btn-md btn-default" %> 
 	</div>
-	<div class="col-xs-2 ">
+	<div class="imagenestilo col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+		<%= image_tag("portada/king-arthur-nine-clips.jpg", width:'100%')  %>
+	</div>
+</div>
+<div class="row">
+	<div class="textrecuadro2 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+		<h3><b> Mellow Banana interesting DVD list</b></h3>
+		<p><% @pelicula.each do |p| %></p>
+      	<p><%= p.name %></p>
+    	<% end %> 
+		<%= link_to " >> ", home_path, class:"btn btn-md btn-default" %>
+	</div>
+
+	<div class="imagenestilo col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+		<%= image_tag("portada/imagin.jpg", width:'100%')  %>
+	</div>
+</div>
+<div class="row">	
+	<div class="textrecuadro1 col-lg-6 col-md-6 col-sm-12 col-xs-12 ">		
+		<h3><b>Mellow Banana interesting NEWS </b></h3> 
+		<p><% @pelicula.each do |p| %></p>
+      	<p><%= p.name %></p>
+    	<% end %> 
+		<%= link_to " >> ", home_path, class:"btn btn-md btn-default" %>
 		
 	</div>
-	<div class="col-xs-10">
-		<h3> Mellow Banana interesting DVD list </h3>
-		<p>DVD1</p>
-		<p>DVD2</p>
-		<p>DVD3</p>
-		<p>DVD4</p>
-		<p>DVD5</p> 
-		<%= link_to "Más >>", home_path, class:"btn btn-md btn-default" %>
+	<div class="imagenestilo col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+		<%= image_tag("portada/filmrate", width:'100%')  %>
 	</div>
-	<div class="col-xs-2 ">
-		
+</div>
+<div class="row">
+	<div class="textrecuadro2 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+		<h3><b>Mellow Banana interesting TV</b></h3> 
+		<p><% @pelicula.each do |p| %></p>
+      	<p><%= p.name %></p>
+    	<% end %> 
+		<%= link_to " >> ", home_path, class:"btn btn-md btn-default" %>		 
 	</div>
-	<div class="col-xs-10 ">		
-		<h3>Mellow Banana interesting News list </h3>
-		<p>News1</p>
-		<p>News2</p>
-		<p>News3</p>
-		<p>News4</p>
-		<p>News5</p> 
-		<%= link_to "Más >>", home_path, class:"btn btn-md btn-default" %>
-	</div>
-	<div class="col-xs-2 ">
-		
-	</div>
-	<div class="col-xs-10 ">
-		<h3>Mellow Banana interesting TV programs </h3>
-		<p>Programa1</p>
-		<p>Programa2</p>
-		<p>Programa3</p>
-		<p>Programa4</p>
-		<p>Programa5</p>
-		<%= link_to "Más >>", home_path, class:"btn btn-md btn-default" %> 
-	</div>
-	<div class="col-xs-2 ">
-		
-	</div>
-	<div class="col-xs-10 ">
-		<h3> Mellow Banana interesting TV programs </h3>
-		<p>Programa1</p>
-		<p>Programa2</p>
-		<p>Programa3</p>
-		<p>Programa4</p>
-		<p>Programa5</p>
-		<%= link_to "Más >>", home_path, class:"btn btn-md btn-default" %> 
-	</div>
-	<div class="col-xs-2 ">
-	</div>
+	<div class="imagenestilo col-lg-6 col-md-6 col-sm-12 col-xs-12">
+		<%= image_tag("portada/gameofthrones.jpg", width:'100%')  %>
+	</div>	
+</div>
+
+
 

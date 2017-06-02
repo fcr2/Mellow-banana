@@ -1,23 +1,25 @@
 class PeliculasController < ApplicationController
+  before_action :set_pelicula, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+
    def index
-   	# muestra las películas que hay en la base de datos.. ya está...esto es todo
-    # lo que hace el index
     @pelicula = Pelicula.all    
    end
    
    def show
    	@pelicula = Pelicula.find(params[:id])
+    @Comment = Comment.where(pelicula_id: @pelicula).order("created_at DESC")
    end
    
    def new
-   	@pelicula = Pelicula.new 
+    @pelicula = Pelicula.new
+
    end
    
    def create    
-   	@pelicula = Pelicula.new(pelicula_params)
-     
+   	@pelicula = Pelicula.new(pelicula_params)    
    		if @pelicula.save
-   			redirect_to peliculas_path, notice: "film saved!"
+   			 redirect_to peliculas_path, notice: "film saved!"
     	else
     		render "new"
     	end
@@ -45,6 +47,12 @@ class PeliculasController < ApplicationController
    end
 
    private
+      #Use callbacks to share common setup or constraints between actions.
+      def set_pelicula
+      @pelicula = Pelicula.find(params[:id])
+      end
+
+      #Never trust parameters from the scary internet, only allow the white list through.
       def pelicula_params
       params.require(:pelicula).permit(:name, :rating, :main_actor, :Synopsis, :launching, :image)
       #parametres que nossaltres permetem que rails guardi la informació

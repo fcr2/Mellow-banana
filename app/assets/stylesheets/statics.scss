@@ -97,7 +97,42 @@ $lletresgrises: #696969;
     .mb {
     color:$bordesuperior;
     }
+  }
 
+  .aboutfondo {
+    width: 100%;
+    height: 100px;
+    background-color: $blanco;
+    margin-top: 10px;
+  }
+  .textjustificado{
+    text-align: justify;
+  }
+
+  .imagenestilo{
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    display: inline-block;
+    text-align: center;
+  }
+
+    .textrecuadro1{
+    height:100%;
+    background-color: $blanco;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    border-bottom: 5px solid $bordesuperior;
+    margin-bottom: 50px;
+  }
+      .textrecuadro2{
+    height:100%;
+    background-color: $blanco;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    border-bottom: 5px solid $fondoencabezado;
+    margin-bottom: 50px;
   }
 
 }

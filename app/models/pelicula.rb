@@ -1,4 +1,10 @@
 class Pelicula < ApplicationRecord
+	devise :database_authenticatable, :registerable,
+	   :recoverable, :rememberable, :trackable, :validatable
+         
+	belongs_to :user
+	has_many :comments, dependent: :destroy 
+
 	validates :name, presence: true 
 	validates :name, presence: { message: "introducir campo"}
 	validates :name, length: { minimum: 2, message:'nombre invalido minimo 2 caracteres' } 	

@@ -1,0 +1,36 @@
+<div>
+<%= form_for([@pelicula, @pelicula.comments.build]) do |f| %>
+	
+	<p>
+		<%= f.label :content %><br />
+		<%= f.text_area(:content, {:class => 'form-control'}) %>
+	</p>
+	<br />
+	<p>
+		<%= f.submit %>
+	</p>
+		
+<% end %>
+</div>
+
+	<div class="col-xs-12" >
+		
+			<strong>Title:</strong>
+			<%= @pelicula.name %>
+		</p>
+		<p>
+			<strong>Content:</strong>
+			<%= @pelicula.content %>
+		</p>
+		<p>
+			<strong>User:</strong>
+			<%= @pelicula.user %>
+		</p>
+		<%= render @post.comments %>
+		<%= render 'comments/comment' %>
+
+	<%= link_to "list", peliculas_path, class:"btn btn-md btn-default" %>	
+	<%= link_to "Edit", edit_pelicula_path, class:"btn btn-md btn-info" %>
+	<%= link_to "delete", pelicula_path, method: :delete, class:"btn btn-md btn-warning" %>
+	<hr />
+	</div>
