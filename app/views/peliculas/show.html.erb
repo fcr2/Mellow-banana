@@ -3,7 +3,7 @@
 	<h3>INFO-<b>FILM</b></h3>	
 	<br />
 	</div>
-	<div class="col-xs-6" >
+	<div class="textojst col-lg-6 col-md-6 col-sm-12 col-xs-12" >
 	<b>Film name: </b> <%= @pelicula.name %><br />
 	<b>Rating: </b> <%= @pelicula.rating %><br />
 	<b>Main actor: </b> <%= @pelicula.main_actor %><br />	
@@ -11,7 +11,7 @@
 	<b>Added to data base at...</b> <%= @pelicula.created_at %><br />
 	<b>Synopsis: </b> <%= @pelicula.Synopsis %><br />	
 	</div> 
-	<div class="col-xs-6" >
+	<div class="imagenmag col-lg-6 col-md-6 col-sm-12 col-xs-12" >
 	<b>image:</b><br /> <%= image_tag @pelicula.image.url(:medium) %><br />
 	</div>
 	<div class="col-xs-12" >	

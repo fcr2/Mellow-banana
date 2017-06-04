@@ -1,55 +1,49 @@
 <div class="container"> <!-- open container -->
   <div class="row fondoencabezado"> <!-- first row -->
-    <div class="col-xs-12">
-      <p>
-        <% if user_signed_in? %>
+    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12" style="text-align:center">
+        <%= image_tag("logo/mellow_banana_logo.png", width:'400px')  %>
+    </div>
+    <div class="col-lg-7 col-md-5 col-sm-12 col-xs-12">
+      <div class="row">
+        <div class="magenencabezado col-xs-12">
+          <p>
+          <% if user_signed_in? %>
 
-        <%= link_to "Sing Out", destroy_user_session_path, method: :delete, class:"btn btn-md btn-default" %>      
-        <%= current_user.email %>      
-        <%= link_to "Edit Account", edit_user_registration_path, class:"btn btn-md btn-default" %>
-        <%= link_to "About us", about_path, class:"btn btn-md btn-default" %>
+          <%= link_to "Sing Out", destroy_user_session_path, method: :delete, class:"btn btn-md btn-default" %>      
+          <%= current_user.email %>      
+          <%= link_to "Edit Account", edit_user_registration_path, class:"btn btn-md btn-default" %>
+          <%= link_to "About us", about_path, class:"btn btn-md btn-default" %>
 
-      <% else%> 
+          <% else%> 
 
-        <%= link_to "Sing in", new_user_session_path, class:"btn btn-md btn-default" %>      
-        <%= link_to "Sing Up", new_user_registration_path, class:"btn btn-md btn-default" %>      
-        <%= link_to "About us", about_path, class:"btn btn-md btn-default" %>
+          <%= link_to "Sing in", new_user_session_path, class:"btn btn-md btn-default" %>      
+          <%= link_to "Sing Up", new_user_registration_path, class:"btn btn-md btn-default" %>      
+          <%= link_to "About us", about_path, class:"btn btn-md btn-default" %>
 
-      <% end %>
-      <p>
-    </div><!-- / first colum -->
-  </div> <!-- / first raw -->
-  <div class="row fondoencabezadotitulo"> <!-- second raw -->        
-      <div class="col-xs-3">
-        <%= image_tag("logo/banana.png", width:'150px')  %>
-      </div>
-      <div class="col-xs-7 textotitulo">
-        <p> MELLOW <span class="diferente">BANANA</span>.</p>
-      </div>
-      <div class="col-xs-2"> 
-      </div> 
-          <br />     
-  </div> <!-- / second row -->
-  <div class="row fondonav"> <!-- third row -->      
-        <div class="col-xs-5"><!-- first colum --> 
+          <% end %>
+          <p>
+        </div><!-- / first colum -->
+        <div class="magenencabezado col-xs-5">
+        </div>
+        <div class="magenencabezado col-xs-7">
           <div class="input-group">
             <span class="input-group-btn">
               <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
             </span>
             <input type="text" class="form-control" placeholder="Search for...">
-          </div><!-- /input-group -->           
-        </div><!-- / first column -->
-      <div class="col-xs-3"><!-- second colum -->          
-      </div><!-- / second colum --> 
-    	<div class="col-xs-4"><!-- third colum -->           
-    		<p>
-  				<%= link_to "Home", home_path, class:"btn btn-md btn-default" %>
-  				<%= link_to "Movies", home_path, class:"btn btn-md btn-default" %>
-  				<%= link_to "DVD", home_path, class:"btn btn-md btn-default" %>
+          </div><!-- /input-group --> 
+        </div>
+        <div class="magenencabezado col-xs-12"><!-- third colum -->           
+          <p>
+          <%= link_to "Home", home_path, class:"btn btn-md btn-default" %>
+          <%= link_to "Movies", home_path, class:"btn btn-md btn-default" %>
+          <%= link_to "DVD", home_path, class:"btn btn-md btn-default" %>
           <%= link_to "News", home_path, class:"btn btn-md btn-default" %>
           <%= link_to "TV", home_path, class:"btn btn-md btn-default" %>
-				<p> 
-			</div><!-- / third colum -->		    
-  </div> <!-- / third raw -->     
+          <p> 
+        </div><!-- / third colum -->    
+      </div> <!-- / inner row -->
+      </div> <!-- / column --> 
+  </div> <!-- / first row -->   
 </div><!-- / container -->
     
