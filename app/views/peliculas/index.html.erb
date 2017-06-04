@@ -20,12 +20,15 @@
     		<tbody>
       			<% @pelicula.each do |peli| %>
      		 	<tr>
-        		<td><%= image_tag peli.image.url(:thumb) %></td>
+        		<td>
+              <%= image_tag peli.image.url(:thumb) %>
+              
+            </td>
         		<td>
        		 		<p>Film name:<%=link_to peli.name, peli %></p>
-					<p>Rating:<%= peli.rating %></p>
-					<p>Main actor:<%= peli.main_actor %></p>
-					<p>Launching:<%= peli.launching %></p></td>
+					    <p>Rating:<%= peli.rating %></p>
+					    <p>Main actor:<%= peli.main_actor %></p>
+					    <p>Launching:<%= peli.launching %></p></td>
       			</tr>
      		 	<%end%>      
    			</tbody>

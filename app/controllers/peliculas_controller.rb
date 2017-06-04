@@ -1,7 +1,7 @@
 class PeliculasController < ApplicationController
+  before_action :authenticate_user!, expcept:[:index, :show]
+   
    def index
-   	# muestra las películas que hay en la base de datos.. ya está...esto es todo
-    # lo que hace el index
     @pelicula = Pelicula.all    
    end
    
