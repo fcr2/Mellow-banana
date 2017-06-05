@@ -52,3 +52,4 @@ gem "font-awesome-rails"
 gem 'devise'
 gem "paperclip", "~> 5.0.0"
 gem 'activeadmin', github: 'activeadmin'
+gem 'cancancan', '~> 2.0'
