@@ -3,9 +3,15 @@ class ApplicationController < ActionController::Base
 
   # before_filter :sanitize_divise_params
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :authenticate_user!
+  
 
   def index
     @gnl = General.all
+  end
+
+  def after_sign_in_path_for(resource)
+      settings_path
   end
 
   protected
@@ -13,6 +19,7 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:username])
   end
+
   
   
 end
