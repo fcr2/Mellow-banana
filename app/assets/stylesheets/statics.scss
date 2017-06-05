@@ -74,6 +74,7 @@ $lletresgrises: #696969;
 
     .boxesinicio1 {
     border-top: 10px solid $bordesuperior;
+    border-radius: 10px;
     background-color: $blanco;
     height: 100%;
     margin-top:50px;
@@ -82,6 +83,7 @@ $lletresgrises: #696969;
     }
     .boxesinicio2 {
     border-top: 10px solid $fondoencabezado;
+    border-radius: 10px;
     background-color: $blanco;
     height: 100%;
     margin-top:50px;
@@ -114,5 +116,15 @@ $lletresgrises: #696969;
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
+    }
+    .registre{
+    background-color: $blanco;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    border-top: 5px solid $fondoencabezado;
+    border-radius: 10px;
+
+    }
 }
