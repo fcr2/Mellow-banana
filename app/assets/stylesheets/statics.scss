@@ -71,6 +71,24 @@ $lletresgrises: #696969;
         color:$bordesuperior;
         }
     }
+    .fondobeforpie {
+    background-color: $fondocolorb;
+    height: 60px;
+    width: 100%;
+    padding-top: 20px;
+    padding-right: 20px;
+    text-align: right;
+
+        .colorpie {
+        color:$bordesuperior;
+        font-weight: normal;
+        }
+        .textopie {
+        color:black;
+        font-size: 14px;
+        }
+       
+    }
 
     .boxesinicio1 {
     border-top: 10px solid $bordesuperior;
@@ -126,5 +144,9 @@ $lletresgrises: #696969;
     border-top: 5px solid $fondoencabezado;
     border-radius: 10px;
 
+    }
+    .tablesettings{
+        margin-top: 50px;
+        
     }
 }

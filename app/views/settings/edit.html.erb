@@ -1,0 +1,10 @@
+		<%= form_for @setting, html: { multipart: true } do |s|%>
+ 
+		<b>Coutry: </b><br /><%= s.text_field :country%> <br /><br />
+		<b>Language: </b><br /><%= s.text_field :language%> <br /><br /> 	
+ 		
+
+ 		<br />
+		<%= s.submit "actualizar", class:"btn btn-md btn-success"%> 
+				
+		<%end%>
