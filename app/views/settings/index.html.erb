@@ -1,10 +1,11 @@
 <div class="row">		
 	<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-		<%= image_tag("others/MBWb.png", width:'200px')  %>
+		<center><%= image_tag("others/MBWb.png", width:'200px')  %></center>
 	</div>
 	<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">	
 		<h1><b>WELCOME</b> to Mellow Banana</h1>	
-	  	<div class="row">	
+	  	<div class="row">
+	  	<br />	
 			<div class="registre col-lg-4 col-md-4 col-sm-12 col-xs-12">	
 				<p>You are logged like:</p> 
 				<p><span class="glyphicon glyphicon-user" style="color:blue"> <%= current_user.email %></p></span><br />
@@ -16,9 +17,44 @@
 				<p>Give your opinion, rate and comment the most interesting films <span class="glyphicon glyphicon-film"></span>, song <span class="glyphicon glyphicon-music"></span>, TV shows <span class="glyphicon glyphicon-blackboard"></span>, ...</p><br />
 				<p>You can compare between the top rated films, the most rated movies, lowest rated  and see which is the most popular film of the moment. Also, you can check out their ratings and see recommendations by other 	people.</p>
 				<p>Enjoy it!!!</p><br />
-			</div>
+				<br />
+			  <div>
+
 			<div class="textojst col-xs-2">
 			</div>
 	  	</div>
+		</div>
+		<div class="tablesettings col-xs-12">
+			<ul class="list-group">
+			  <li class="list-group-item active"><b>User acount</b> (info)</li>
+			  <li class="list-group-item"><b>Id: </b><%= @user.id  %></li>
+			  <li class="list-group-item"><b>Email: </b><%= current_user.email %></li>
+			  <li class="list-group-item"><b>Sing in at: </b><%= current_user.current_sign_in_at  %></li>
+			  <li class="list-group-item"><b>Sing in count: </b><%= current_user.sign_in_count %></li>
+			  <li class="list-group-item"><b>Created at: </b><%= current_user.created_at %></li>
+			</ul>
+		</div>
+
+ 		<%if !@setting.nil?%>
+
+ 		<div class="tablesettings col-xs-12">
+			<ul class="list-group">
+			<li class="list-group-item active"><b>Other</b> (info)</li>
+   	 		<li class="list-group-item">Country&nbsp;<%= @setting.country %></li>
+   	 		<li class="list-group-item">Language&nbsp;<%= @setting.language %></li>   	 	
+ 			<br/>
+      		<%= link_to ' Editar', edit_setting_path(@setting.id), :title => "Editar", class: 'btn btn-md btn-primary fa fa-1x fa-edit', style:"color: white;" %>
+       		</div>
+    
+ 			<%else%>
+ 
+   			<%= link_to 'Añadir', new_setting_path, title:"Añadir setting !!", class:"btn btn-md btn-danger fa fa-1x fa-address-book nodecor pull-right", style:"color:white;" %>
+ 			<%end%>
+		</div>
 	</div>
 </div>
+
+
+
+
+
