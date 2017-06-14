@@ -9,7 +9,10 @@ class Ability
       if user.id == 2
         can :manage, :all
       else
-        can :read, Pelicula
+        can :read, :all
+        # can :read, Pelicula
+        # can :read, User
+        
       end
     
     # The first argument to `can` is the action you are giving the user

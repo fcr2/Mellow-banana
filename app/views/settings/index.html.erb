@@ -40,15 +40,15 @@
  		<div class="tablesettings col-xs-12">
 			<ul class="list-group">
 			<li class="list-group-item active"><b>Other</b> (info)</li>
-   	 		<li class="list-group-item">Country&nbsp;<%= @setting.country %></li>
-   	 		<li class="list-group-item">Language&nbsp;<%= @setting.language %></li>   	 	
+   	 		<li class="list-group-item"><b>Country:&nbsp;</b><%= @setting.country %></li>
+   	 		<li class="list-group-item"><b>Language:&nbsp;</b><%= @setting.language %></li>   	 	
  			<br/>
       		<%= link_to ' Editar', edit_setting_path(@setting.id), :title => "Editar", class: 'btn btn-md btn-primary fa fa-1x fa-edit', style:"color: white;" %>
        		</div>
     
  			<%else%>
  
-   			<%= link_to 'Añadir', new_setting_path, title:"Añadir setting !!", class:"btn btn-md btn-danger fa fa-1x fa-address-book nodecor pull-right", style:"color:white;" %>
+   			<%= link_to 'Añadir setting', new_setting_path, title:"Añadir setting !!", class:"btn btn-md btn-danger fa fa-1x fa-address-book nodecor pull-right", style:"color:white;" %>
  			<%end%>
 		</div>
 	</div>

@@ -2,17 +2,17 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   # before_filter :sanitize_divise_params
-  before_action :configure_permitted_parameters, if: :devise_controller?
-  before_action :authenticate_user!
+  # before_action :configure_permitted_parameters, if: :devise_controller?
+  # before_action :authenticate_user!
   
 
   def index
     @gnl = General.all
   end
 
-  def after_sign_in_path_for(resource)
-      settings_path
-  end
+  # def after_sign_in_path_for(resource)
+  #     settings_path
+  # end
 
   protected
 

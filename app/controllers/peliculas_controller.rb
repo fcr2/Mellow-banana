@@ -1,4 +1,5 @@
 class PeliculasController < ApplicationController
+  before_action :authenticate_user!
    
    def index
     @pelicula = Pelicula.all    
