@@ -49,6 +49,7 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
+    active_admin_flat_skin (0.1.2)
     activejob (5.0.3)
       activesupport (= 5.0.3)
       globalid (>= 0.3.6)
@@ -237,6 +238,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  active_admin_flat_skin
   activeadmin!
   bcrypt!
   bootstrap-sass (~> 3.3, >= 3.3.7)
