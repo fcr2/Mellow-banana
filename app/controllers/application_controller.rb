@@ -10,9 +10,13 @@ class ApplicationController < ActionController::Base
     @gnl = General.all
   end
 
-  # def after_sign_in_path_for(resource)
-  #     settings_path
-  # end
+  def after_sign_in_path_for(resource)
+    if resource.class == User
+      settings_path
+    elsif resource.class == AdminUser
+      admin_dashboard_path
+    end
+  end
 
   protected
 
