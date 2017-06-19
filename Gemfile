@@ -54,3 +54,4 @@ gem "paperclip", "~> 5.0.0"
 gem 'activeadmin', github: 'activeadmin'
 gem 'cancancan', '~> 2.0'
 gem 'active_admin_flat_skin'
+gem 'stripe', '~> 2.11'

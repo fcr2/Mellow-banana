@@ -9,9 +9,10 @@
   </head>
   <body class="aplicaciondisenyo">
 
-    <%= render "layouts/navbar" %>
+    <%= render "layouts/shared/navbar" %>
 
      <div class="container"> <!-- container -->
+      
       <div class="row fondocuerpo ">
 
     <%= yield %>
@@ -19,7 +20,7 @@
       </div> <!-- / row -->
      </div> <!-- / container -->     
 
-   <%= render "layouts/footer" %>
+   <%= render "layouts/shared/footer" %>
 
   </body>
 </html>
